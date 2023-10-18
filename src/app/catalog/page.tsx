@@ -3,7 +3,7 @@ import { Badge } from "../../components/ui/badge"
 import { prismaClient } from "../../lib/prisma"
 import CategoryItem from "./components/category-item"
 
-const CatelogPage = async () => {
+const CatalogPage = async () => {
   const categories = await prismaClient.category.findMany({})
   return (
     <div className="p-5 flex flex-col gap-8">
@@ -18,4 +18,4 @@ const CatelogPage = async () => {
   )
 }
 
-export default CatelogPage
+export default CatalogPage
