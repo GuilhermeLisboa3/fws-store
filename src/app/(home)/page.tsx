@@ -25,8 +25,16 @@ export default async function Home() {
         <Categories/>
       </div>
       <div className="mt-8">
+        <p className="mb-3 pl-5 font-bold uppercase">Ofertas</p>
         <ProductList products={deals}/>
       </div>
+      <Image
+        className="h-auto w-full px-5"
+        sizes="100vw"
+        src={"/banner-home-02.png"}
+        width={350} height={150} 
+        alt="Até 55% de desconto em mouses!"
+      />
     </div>
   )
 }
