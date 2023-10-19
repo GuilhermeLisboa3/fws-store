@@ -1,7 +1,7 @@
 'use client'
 import { ProductItemTotalPrice } from "@/helpers/product";
 import { Badge } from "@/components/ui/badge";
-import { ArrowDownIcon, ArrowLeftIcon, ArrowRightIcon } from "lucide-react";
+import { ArrowDownIcon, ArrowLeftIcon, ArrowRightIcon, TruckIcon } from "lucide-react";
 import { useState } from "react";
 import { Button } from "../../../../components/ui/button";
 
@@ -59,7 +59,8 @@ const ProductInfo = ({ product: { basePrice, description, discountPercentage, na
       <Button className="mt-8 uppercase font-bold">Adicionar ao carrinho</Button>
 
       <div className="bg-accent flex items-center px-5 py-2 justify-between mt-5 rounded-lg">
-        <div className="flex flex-col gap-3">
+        <TruckIcon/>
+        <div className="flex flex-col gap-2">
           <p className="text-xs"> Entrega via <span className="font-bold">FSPacket®</span></p>
           <p className="text-[#8162FF] text-xs">Envio para <span className="font-bold">todo Brasil</span></p>
         </div>
