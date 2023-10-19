@@ -94,7 +94,7 @@ const Header = () => {
         <SheetTrigger asChild>
           <Button size="icon" variant="outline"><ShoppingCartIcon/></Button>
         </SheetTrigger>
-        <SheetContent>
+        <SheetContent className="w-[90%]">
           <Cart/>
         </SheetContent>
       </Sheet>
