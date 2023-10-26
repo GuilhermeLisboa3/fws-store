@@ -37,10 +37,10 @@ const ProductInfo = ({ product }: ProductInfoProps) => {
         )}
       </div>
       { product.discountPercentage > 0 && (
-        <p className="text-sm opacity-75 line-through">R$ {Number(product.basePrice).toFixed(2)}</p>
+        <p className="text-sm line-through opacity-75">R$ {Number(product.basePrice).toFixed(2)}</p>
       )}
 
-      <div className="flex items-center gap-2 mt-4">
+      <div className="mt-4 flex items-center gap-2">
         <Button size='icon' variant='outline' onClick={handleDecreaseQuantityClick}>
           <ArrowLeftIcon size={16}/>
         </Button>
@@ -52,18 +52,18 @@ const ProductInfo = ({ product }: ProductInfoProps) => {
         </Button>
       </div>
 
-      <div className="flex flex-col gap-3 mt-8">
+      <div className="mt-8 flex flex-col gap-3">
         <h3 className="font-bold">Descrição</h3>
-        <p className="text-sm opacity-60 text-justify">{product.description}</p>
+        <p className="text-justify text-sm opacity-60">{product.description}</p>
       </div>
 
-      <Button className="mt-8 uppercase font-bold" onClick={handleAddToCartItem}>Adicionar ao carrinho</Button>
+      <Button className="mt-8 font-bold uppercase" onClick={handleAddToCartItem}>Adicionar ao carrinho</Button>
 
-      <div className="bg-accent flex items-center px-5 py-2 justify-between mt-5 rounded-lg">
+      <div className="mt-5 flex items-center justify-between rounded-lg bg-accent px-5 py-2">
         <TruckIcon/>
         <div className="flex flex-col gap-2">
           <p className="text-xs"> Entrega via <span className="font-bold">FSPacket®</span></p>
-          <p className="text-[#8162FF] text-xs">Envio para <span className="font-bold">todo Brasil</span></p>
+          <p className="text-xs text-[#8162FF]">Envio para <span className="font-bold">todo Brasil</span></p>
         </div>
         <p className="text-xs font-bold">Frete Gratis</p>
       </div>

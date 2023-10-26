@@ -23,12 +23,12 @@ const Cart = () => {
   }
 
   return (
-    <div className="flex flex-col gap-8 h-full">
+    <div className="flex h-full flex-col gap-8">
       <Badge className="w-fit gap-1 border-2 border-primary px-3 py-[0.375rem] text-base uppercase" variant='outline'>
         <ShoppingCartIcon/>
           Carrinho
       </Badge>
-      <div className="flex flex-col gap-5 h-full max-h-full overflow-hidden">
+      <div className="flex h-full max-h-full flex-col gap-5 overflow-hidden">
         <ScrollArea className="h-full">
           <div className="flex h-full flex-col gap-8">
             { products.length > 0 ? (
@@ -68,7 +68,7 @@ const Cart = () => {
             <p>Total</p>
             <p>R$ {total.toFixed(2)}</p>
           </div>
-          <Button onClick={handleFinishPurchaseClick} className="font-bold uppercase mt-7">Finalizar compra</Button>
+          <Button onClick={handleFinishPurchaseClick} className="mt-7 font-bold uppercase">Finalizar compra</Button>
         </div>
         )
       }

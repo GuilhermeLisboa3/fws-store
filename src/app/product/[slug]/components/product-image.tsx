@@ -22,9 +22,9 @@ const ProductImages = ({ imageUrls, name }: ProductImagesProps) => {
         style={{ objectFit: 'contain' }}/>
       </div>
 
-      <div className="grid grid-cols-4 gap-4 mt-8 px-5">
+      <div className="mt-8 grid grid-cols-4 gap-4 px-5">
         {imageUrls.map(imageUrl => (
-          <button key={imageUrl} className={`flex items-center justify-center rounded-lg bg-accent h-[100px]
+          <button key={imageUrl} className={`flex h-[100px] items-center justify-center rounded-lg bg-accent
             ${imageUrl === currentImage && "border-2 border-solid border-primary"}
           `}
             onClick={() => handleImageClick(imageUrl)}

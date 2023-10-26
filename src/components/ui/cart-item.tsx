@@ -27,7 +27,7 @@ const CartItem = ({product}: CartItemProps) => {
   return (
     <div className="flex items-center justify-between">
       <div className="flex items-center gap-4">
-        <div className="bg-accent flex items-center justify-center rounded-lg w-[77px] h-[77px]">
+        <div className="flex h-[77px] w-[77px] items-center justify-center rounded-lg bg-accent">
           <Image
               src={product.imageUrls[0]}
               height={0}
@@ -43,9 +43,9 @@ const CartItem = ({product}: CartItemProps) => {
         <div className="flex flex-col">
           <p className="text-xs">{product.name}</p>
           <div className="flex items-center gap-2">
-            <p className="font-bold text-sm">R$ {product.totalPrice.toFixed(2)}</p>
+            <p className="text-sm font-bold">R$ {product.totalPrice.toFixed(2)}</p>
             {product.discountPercentage > 0 && (
-              <p className="opacity-75 line-through text-xs">R$ {Number(product.basePrice).toFixed(2)}</p>
+              <p className="text-xs line-through opacity-75">R$ {Number(product.basePrice).toFixed(2)}</p>
             )}
           </div>
 

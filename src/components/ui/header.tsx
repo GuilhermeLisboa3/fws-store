@@ -20,7 +20,7 @@ const Header = () => {
     await signOut()
   }
   return ( 
-    <Card className="flex justify-between p-[1.875rem] items-center">
+    <Card className="flex items-center justify-between p-[1.875rem]">
       <Sheet>
         <SheetTrigger asChild>
           <Button size="icon" variant="outline"><MenuIcon/></Button>
@@ -32,7 +32,7 @@ const Header = () => {
 
           { status === 'authenticated' && data?.user && (
             <div className="flex flex-col">
-              <div className="flex items-center gap-2 my-4">
+              <div className="my-4 flex items-center gap-2">
                 <Avatar>
                   <AvatarFallback>
                     { data.user.name?.[0].toUpperCase()}
